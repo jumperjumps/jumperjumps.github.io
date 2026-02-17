@@ -1,0 +1,13 @@
+
+
+.box{
+    border: 5px solid blue ;
+    height: 20px;
+    width: 1415px;
+    margin: 5px
+}
+#box1{
+    border: 5px solid brown;
+    height: 20px;
+    width: 1415px
+}
