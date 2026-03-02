@@ -1,0 +1,88 @@
+
+/* colors
+--Floral-White-- #FFFCF2
+--Dust-Gray-- #CCC5B9
+--Charcoal-Brown-- #403D39
+--Carbon-Black-- #252422
+--Spicy-Paprika-- #EB5E28
+--Golden-Sun-- #E3B23C
+ */
+
+        :root {
+            --color-accent:  #EB5E28;      
+            --color-accent2: #E3B23C;     
+            --color-background: #403D39;
+            --color-lightbackground:  #CCC5B9;
+            --color-text-dark: #252422;
+            --color-text-light: #FFFCF2;
+
+            /* Typography */
+            --font-primary: 'Lexend Exa', -apple-system, BlinkMacSystemFont, sans-serif;
+            /* 
+        .lexend-exa-<uniquifier> {
+        font-family: "Lexend Exa", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: <weight>;
+        font-style: normal;
+        } */
+            --font-secondary: "Libre Caslon Text", serif;
+
+        }
+
+/* CSS for every page top title and background color */
+header {
+    text-align: right;
+}
+
+body{
+    background-color: #403D39;
+}
+
+main{
+    font-family: var(--font-primary);
+
+}
+
+h1{
+    color:#252422;
+    font-family: var(--font-primary)
+}
+h1 i{
+    color: #EB5E28;
+    font-family: var(--font-secondary);
+}
+
+nav h2 {
+    display: flex;
+    background-color: #CCC5B9;
+    padding: 20px;
+    gap: 10px;
+    color: #FFFCF2;
+    margin-top: -2px;
+
+
+}
+a{
+    text-decoration: none;
+}
+h2 a{
+    color: #EB5E28 ;
+    font-family: var(--font-primary);
+}
+h3 a{
+    color: #EB5E28;
+    font-family: var(--font-primary);
+}
+
+/* CSS for home(a) page only */
+
+main img {
+  display: block;
+  height:400px;
+  padding-top: 20px;
+}
+/* CSS for page (b) */
+
+/* CSS for page(c) */
+
+/* CSS for page(d) */
