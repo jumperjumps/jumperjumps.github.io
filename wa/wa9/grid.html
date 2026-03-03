@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    body {
+  font: 1.2em / 1.5 sans-serif;
+}
+
+/* Grid 1 */
+.grid1 > * {
+  background-color: #4d7298;
+  border: 2px solid #77a6b6;
+  border-radius: 0.5em;
+  color: white;
+  padding: 0.5em;
+}
+
+.grid1 {
+ display:grid;
+ gap: 20px;
+ grid-template-columns: auto auto auto;
+
+}
+
+/* Grid 2 */
+.grid2 > * {
+  border-radius: 0.5em;
+  color: white;
+  padding: 0.5em;
+}
+
+.item1 {
+  background-color: rgb(74 102 112 / 70%);
+  border: 5px solid rgb(74 102 112 / 100%);
+}
+
+.item2 {
+  background-color: rgb(214 162 173 / 70%);
+  border: 5px solid rgb(214 162 173 / 100%);
+}
+
+.grid2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 100px 100px 100px;
+  gap: 10px;
+}
+
+.item1 {
+  /* Add styles here */
+}
+
+.item2 {
+  /* Add styles here */
+}
+</style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<div class="grid1">
+  <div>One</div>
+  <div>Two</div>
+  <div>Three</div>
+  <div>Four</div>
+</div>
+
+<div class="grid2">
+  <div class="item1">One</div>
+  <div class="item2">Two</div>
+</div>
+    
+</body>
+</html>
