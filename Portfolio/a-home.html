@@ -1,5 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+    <style>
+.homegrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 30px; 
+    align-items: start;
+    padding: 20px;
+}
+
+.flexhome {
+    margin-left: 20px;
+    margin-top: 350px;
+    max-width: 600px;
+}
+
+.fleximg img {
+    height: 550px;
+    border-radius: 5px;
+}
+</style>
 <link rel="stylesheet" href="portfolio.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -8,13 +28,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anton+SC&family=Lexend+Exa:wght@100..900&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-     <style>
-        main{
-            position:relative;
-            left:20px;
-            right:10px;
-        }
-    </style>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,7 +39,8 @@
     <h1>
         Laura Jumper <i>Portfolio</i>
     </h1>
-    <nav>
+</header>
+  <nav>
     <h2>
         <a href="a-home.html">Home</a> | 
         <a href="b-design.html">Design</a> | 
@@ -34,14 +48,19 @@
         <a href="d-contact.html">Contact</a>
     </h2>
 </nav>
-</header>
 
 
+   <main class="homegrid">
 
-   <main>
+    <div class="flexhome">
     <h3>About Me</h3>
-    <p>Is currently a student at University of Colorado Boulder in the College of Engineer and ATLS department. She has been diving into many different creative tracks in her education and is enthusiastic about getting more experience in the creative tech field. </p>
+    <p>Is currently a student at University of Colorado Boulder in the College of Engineer and ATLS department. 
+        She has been diving into many different creative tracks in her education and is enthusiastic about getting 
+        more experience in the creative tech field. </p>
+    </div>
+    <div class="fleximg">
     <img src="assets/Profile.jpg" alt="A Headshot of me.">
+    </div>
     </main>
 </body>
 </html>

@@ -18,28 +18,45 @@
 
             /* Typography */
             --font-primary: 'Lexend Exa', -apple-system, BlinkMacSystemFont, sans-serif;
-            /* 
-        .lexend-exa-<uniquifier> {
-        font-family: "Lexend Exa", sans-serif;
-        font-optical-sizing: auto;
-        font-weight: <weight>;
-        font-style: normal;
-        } */
             --font-secondary: "Libre Caslon Text", serif;
 
         }
 
 /* CSS for every page top title and background color */
+
+nav h2 {
+    position: absolute;
+    left:40px;
+    z-index: 999;
+
+    width: fit-content;
+    text-align: left;
+
+    padding: 6px 10px 3px;
+    margin-top: -5px;
+    margin-bottom:auto;
+
+    background-color: #CCC5B9;
+    color: #FFFCF2;
+
+    border-radius: 10px;
+
+}
+
 header {
-    position:sticky;
-    top: 10px;
+    position: sticky;
+    top: 0;
+    z-index: 0;
+
     text-align: right;
-    background-color: rgba(204, 197, 185, 20);
-    padding-top: 30px;
-   
-    padding-right: 10px;
+
+    background-color: #252422;
+
+    padding: 30px 10px 5px;
+
     border-radius: 20px;
-    
+
+    margin: 0;
 }
 
 body{
@@ -47,46 +64,46 @@ body{
 }
 
 main{
+    padding: 20px;
     font-family: var(--font-primary);
     color:#CCC5B9;
-
 }
 
 h1{
-    color:#252422;
+    color:#CCC5B9;
     font-family: var(--font-primary)
 }
+
 h1 i{
     color: #EB5E28;
     font-family: var(--font-secondary);
 }
 
-nav h2 {
-    position:absolute;
-    top: 60px;
-    left:20px;
-    color: #FFFCF2;
-    background-color: rgba(227,178,60,50);
-}
-a{
+a {
     text-decoration: none;
 }
+
 h2 a{
-    color: #EB5E28 ;
+    color: #252422 ;
     font-family: var(--font-primary);
 }
+
 h3 a{
+    text-align: left;
     color: #EB5E28;
     font-family: var(--font-primary);
 }
 
+p {
+    text-indent: 2em;
+}
+
+nav h3{
+    word-spacing: 20px; 
+}
+
 /* CSS for home(a) page only */
 
-main img {
-  display: block;
-  height:400px;
-  padding-top: 20px;
-}
 /* CSS for page (b) */
 
 /* CSS for page(c) */
