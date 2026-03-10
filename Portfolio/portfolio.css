@@ -90,7 +90,7 @@ h2 a{
 
 h3 a{
     text-align: left;
-    color: #EB5E28;
+     color: #E3B23C;
     font-family: var(--font-primary);
 }
 
@@ -101,11 +101,3 @@ p {
 nav h3{
     word-spacing: 20px; 
 }
-
-/* CSS for home(a) page only */
-
-/* CSS for page (b) */
-
-/* CSS for page(c) */
-
-/* CSS for page(d) */
