@@ -18,6 +18,22 @@
     box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
 
+@media (max-width: 450px) {
+
+    .photo-grid {
+        grid-template-columns: 1fr;   /* stack images vertically */
+        gap: 15px;
+        padding: 0 10px;
+    }
+
+    .photo-grid img {
+        width: 100%;        /* full width */
+        height: auto;       /* maintain aspect ratio */
+        object-fit: cover;  /* looks cleaner on mobile */
+        border-radius: 8px;
+    }
+}
+
 </style>
  <link rel="stylesheet" href="portfolio.css">
      <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -75,7 +91,10 @@
           </div>
          <h2>Live Dance Photoshoot</h2>
         <h4>Unknown</h4>
-        <p>This photo shoot demonstrates an ability to get...</p>
+        <p>This photo shoot highlights my ability to capture clear and well-lit images during live performances. 
+            I focus on preserving the energy of the movement while maintaining details, accurate color, and lighting 
+            in changing stage environments. Whether working with fast movement, dramatic spotlights, or low‑light 
+            conditions, I ensure every image reflects the atmosphere of the performance and the personality of the artist. </p>
         <div class="photo-grid">
         <img src="assets/Cat2.jpg" alt="Green blue mirror">
         <img src="assets/Cat1.jpg" alt="Close up">

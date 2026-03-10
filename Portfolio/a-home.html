@@ -23,6 +23,29 @@
         color:#E3B23C;
     }
 
+    @media (max-width: 450px) {
+
+    .homegrid {
+        grid-template-columns: 1fr;   /* stack vertically */
+        gap: 20px;
+        padding: 10px;
+    }
+
+    .flexhome {
+        margin-left: 0;
+        margin-top: 0;
+        max-width: 100%;
+        padding: 0 10px;
+        text-align: left;
+    }
+
+    .fleximg img {
+        width: 100%;        /* full width */
+        height: auto;       /* maintain aspect ratio */
+        border-radius: 8px;
+    }
+}
+
 </style>
 
 <link rel="stylesheet" href="portfolio.css">

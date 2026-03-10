@@ -101,3 +101,46 @@ p {
 nav h3{
     word-spacing: 20px; 
 }
+
+@media (max-width: 450px) {
+
+    header {
+        padding: 18px 12px 10px;
+        text-align: right;
+        border-radius: 0 0 18px 18px;
+    }
+
+    nav h2 {
+        left: 16px;
+        top: 12px;
+
+        padding: 6px 10px;
+        font-size: 0.95rem;
+        border-radius: 8px;
+    }
+
+    nav h3 {
+        word-spacing: 8px;
+        font-size: 0.85rem;
+    }
+
+    main {
+        padding: 15px;
+        font-size: 0.95rem;
+        line-height: 1.55;
+    }
+
+    h1 {
+        font-size: 1.6rem;
+        margin-bottom: 10px;
+    }
+
+    h1 i {
+        font-size: 1.4rem;
+    }
+
+    p {
+        text-indent: 1.2em;
+        font-size: 0.95rem;
+    }
+}

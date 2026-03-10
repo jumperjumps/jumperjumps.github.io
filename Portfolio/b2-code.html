@@ -18,6 +18,29 @@
     .flexvid video{
         margin-top: 40px;
     }
+
+    @media (max-width: 450px) {
+
+    .codegrid {
+        grid-template-columns: 1fr;   /* stack vertically */
+        gap: 20px;
+        padding: 10px;
+    }
+
+    .flexcode {
+        margin-left: 0;
+        margin-top: 0;
+        max-width: 100%;
+        padding: 0 10px;
+    }
+
+    .flexvid video {
+        width: 100%;       /* responsive video */
+        height: auto;
+        margin-top: 10px;
+        border-radius: 8px;
+    }
+}
 </style>
 <link rel="stylesheet" href="portfolio.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">

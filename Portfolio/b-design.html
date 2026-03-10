@@ -27,6 +27,35 @@
     border-radius: 5px;
     margin-bottom: 20px;
 }
+
+@media (max-width: 450px) {
+
+    .infogrid {
+        grid-template-columns: 1fr;   /* stack everything */
+        gap: 15px;
+    }
+
+    .infogrid h1,
+    .infogrid img,
+    .infogrid p,
+    .infogrid h2,
+    .infogrid h3 {
+        grid-column: 1;               /* all content in one column */
+    }
+
+    .infogrid img {
+        width: 100%;
+        height: auto;
+        margin: 0 auto 15px;
+        border-radius: 8px;
+    }
+
+    .infogrid p {
+        max-width: 100%;
+        padding: 0 5px;
+        line-height: 1.55;
+    }
+}
 </style>
 
 <link rel="stylesheet" href="portfolio.css">
