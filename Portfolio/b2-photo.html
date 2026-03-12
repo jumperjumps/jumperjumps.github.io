@@ -6,33 +6,32 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
-    /* margin: 25px auto 25px auto; */
-    /* width: auto; */
 }
 
-/* IMAGES */
 .photo-grid img {
     height:400px;
     object-fit:contain;
     border-radius: 6px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    border-radius: 8px;
 }
 
-@media (max-width: 450px) {
+/* @media (max-width: 600px) {
 
     .photo-grid {
-        grid-template-columns: 1fr;   /* stack images vertically */
+        display:grid;
+        grid-template-columns: 1fr;  
         gap: 15px;
         padding: 0 10px;
     }
 
     .photo-grid img {
-        width: 100%;        /* full width */
-        height: auto;       /* maintain aspect ratio */
-        object-fit: cover;  /* looks cleaner on mobile */
+        width: 100%;      
+        height: auto;       
+        object-fit: cover;  
         border-radius: 8px;
     }
-}
+} */
 
 </style>
  <link rel="stylesheet" href="portfolio.css">
@@ -51,20 +50,21 @@
 </head>
 
 <body>
-    <header><h1 class="sender-column ">
-        Design <i>Portfolio</i></h1>
+   <header>
+        <h1>Design <i>Portfolio</i></h1>
 
     <nav>
-    <h2> <a href="a-home.html">Home</a> | 
+    <h2><a href="a-home.html">Home</a> | 
         <a href="b-design.html">Design</a> | 
         <a href="c-resume.html">Resume</a> 
     </nav>
-    <nav>
+    </header>
+
+     <nav class="nav2">
         <h3><a href="b2-designs.html">Design</a> 
             <a href="b2-photo.html">Photography</a> 
             <a href="b2-code.html">Code</a></h3>
     </nav>
-    </header>
    
     <main>
        
@@ -77,8 +77,8 @@
         <img src="assets/Sky5.jpg" alt="Blur from the back">
         <img src="assets/Sky3.jpg" alt="Bridge leaning back">
         <img src="assets/Sky4.jpg" alt="Purple lighting">
-        
         </div>
+
         <h2>Senior Photoshoot</h2>
         <h4>Model Cole Eberhart</h4>
         <p>This photo shoot demonstrates strong foundational skills in classic photography, producing clean, well-composed images in outdoor settings. It highlights the ability to select visually compelling locations and utilize natural lighting effectively to create clear and aesthetically pleasing photographs.</p>
@@ -87,9 +87,10 @@
         <img src="assets/Cole4.jpg" alt="Twisty trees">
         <img src="assets/Cole5.jpg" alt="Mountains behind">
         <img src="assets/Cole2.jpg" alt="In feild">
-         <img src="assets/Cole1.jpg" alt="Sitting on rock">
-          </div>
-         <h2>Live Dance Photoshoot</h2>
+        <img src="assets/Cole1.jpg" alt="Sitting on rock">
+        </div>
+
+        <h2>Live Dance Photoshoot</h2>
         <h4>Unknown</h4>
         <p>This photo shoot highlights my ability to capture clear and well-lit images during live performances. 
             I focus on preserving the energy of the movement while maintaining details, accurate color, and lighting 
@@ -102,8 +103,8 @@
         <img src="assets/Cat4.jpg" alt="Bridge leaning back">
         <img src="assets/Cat5.jpg" alt="Purple lighting">
         <img src="assets/Cat3.jpg" alt="Purple lighting">
-
         </div>
+
     </main>
 </body>
 </html>

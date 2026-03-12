@@ -2,17 +2,18 @@
 <html lang="en">
 
 <style>
+
 .infogrid {
     display: grid;
     grid-template-columns: 1fr 1fr; 
-    gap: 20px;
+    gap: 100px;
     align-items: start;
 }
 
 .infogrid p {
     grid-column: 1; 
     max-width: 600px;
-    line-height: 1.5;
+    overflow-y: hidden;
 }
 
 .infogrid h2,
@@ -20,18 +21,35 @@
     grid-column: 1; 
 }
 
-.infogrid img, h1{
+.infogrid img{
     grid-column: 2; 
     width: 100%;
     height: auto;
-    border-radius: 5px;
-    margin-bottom: 20px;
+ 
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+.textstick{
+    position:sticky;
+    top:120px; 
+}
+.textstick2{
+    position:sticky;
+    top:120px; 
+}
+.textstick3{
+    position:sticky;
+    top:120px; 
+}
+.textstick4{
+    position:sticky;
+    top:120px; 
 }
 
-@media (max-width: 450px) {
+/* @media (max-width: 450px) {
 
     .infogrid {
-        grid-template-columns: 1fr;   /* stack everything */
+        grid-template-columns: 1fr;  
         gap: 15px;
     }
 
@@ -40,7 +58,7 @@
     .infogrid p,
     .infogrid h2,
     .infogrid h3 {
-        grid-column: 1;               /* all content in one column */
+        grid-column: 1;              
     }
 
     .infogrid img {
@@ -55,7 +73,7 @@
         padding: 0 5px;
         line-height: 1.55;
     }
-}
+} */
 </style>
 
 <link rel="stylesheet" href="portfolio.css">
@@ -73,25 +91,26 @@
 </head>
 
 <body>
-    <header><h1 class="sender-column ">
-        Design <i>Portfolio</i></h1>
+    <header>
+        <h1>Design <i>Portfolio</i></h1>
 
     <nav>
-    <h2> <a href="a-home.html">Home</a> | 
+    <h2><a href="a-home.html">Home</a> | 
         <a href="b-design.html">Design</a> | 
         <a href="c-resume.html">Resume</a> 
     </nav>
-    <nav>
+    </header>
+
+     <nav class="nav2">
         <h3><a href="b2-designs.html">Design</a> 
             <a href="b2-photo.html">Photography</a> 
             <a href="b2-code.html">Code</a></h3>
-
     </nav>
-    </header>
 
-     <main class ="designgrid">
+     <main>
         <div class ="infogrid">
-       
+
+       <div class="textstick">
         <h1>Colorado Symphony Classics</h1>
         <p> Demonstrates advanced proficiency in Adobe Illustrator and Adobe InDesign through thoughtful layout, typography, and visual hierarchy.<br><br>
 
@@ -100,22 +119,33 @@
         The back layout accommodates all required information while maintaining the elegant visual. Strategic use of typographic hierarchy, spacing, and alignment is demonstrated.<br><br>
 
         A primary challenge of this project was developing a visual identity independent of the existing real-world company. This required creating a design aesthetic from the ground up, as well as designing an effective layout capable of organizing a large amount of information in a clear manner.</p>
-
+        </div>
+        <div>
         <img src="assets/SymphPoster1V.jpg" alt="Front Design.">
         <img src="assets/SymphPoster1V2.jpg" alt="Back Design.">
+        </div>
 
+        <div class="textstick2">
         <h1>Anatomy of Typography</h1>
         <p> This project demonstrates advanced expertise in typography, including a strong understanding of font anatomy.<br><br>
 
             Created entirely in Adobe Illustrator, the work showcases precision in technical execution, attention to detail, and intentional designing decisions that enhance readability and the visual impact.</p>
+        </div>
+        <div>
         <img src="assets/Ananomy.jpg" alt="Front Design.">
+        </div>
 
+        <div class="textstick3">
         <h1>Poster Replicate</h1>
         <p> This project demonstrates the ability to accurately recreate an existing design through original and intentional methods. It reflects a high level of attention to detail and a strong commitment to preserving the integrity of the original piece.<br><br>
 
             Created entirely in Adobe Illustrator, every element was designed by hand to delicately reconstruct a printed poster. The work highlights a strong understanding of typography, color theory, scale, spacing, and overall visual hierarchy.</p>
+        </div>
+        <div>
         <img src="assets/Duplicate-100.jpg" alt="Front Design.">
+        </div>
 
+        <div class="textstick4">
         <h1>Lordess Leaves</h1>
         <p> This project showcases a multidisciplinary design skill set by taking an original concept from the original idea to full brand realization. The work demonstrates the ability to develop a cohesive visual identity—including the look, feel, logo, and brand mission—while ensuring all elements flow as a unified visual rather than separate components.<br><br>
 
@@ -123,8 +153,11 @@
 
             This project showcases many different expertise. It demonstrates the ability to come up with an original idea and bring it to life by designing a look, logo, feel, and brand with a mission. There is attention to creating a cohesive brand and product that feels like one making it more pleasing to the consumers. 
         </p>
+        </div>
+        <div>
         <img src="assets/TT3D.jpg" alt="Front Design.">
         <img src="assets/TTLayout.jpg" alt="Front Design.">
+        </div>
         </div>
     </main>
 </body>

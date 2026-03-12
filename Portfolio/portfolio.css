@@ -24,6 +24,10 @@
 
 /* CSS for every page top title and background color */
 
+html{
+    overflow-x: hidden;
+}
+
 nav h2 {
     position: absolute;
     left:40px;
@@ -36,8 +40,8 @@ nav h2 {
     margin-top: -5px;
     margin-bottom:auto;
 
-    background-color: #CCC5B9;
-    color: #FFFCF2;
+    background-color:var(--color-lightbackground);
+    color: var(--color-text-light);
 
     border-radius: 10px;
 
@@ -47,20 +51,20 @@ header {
     position: sticky;
     top: 0;
     z-index: 0;
-
     text-align: right;
-
-    background-color: #252422;
-
-    padding: 30px 10px 5px;
-
-    border-radius: 20px;
-
+    background-color: var(--color-text-dark);
+    border: 2px;
+    padding: 30px 30px 10px;
+    width: auto;
     margin: 0;
+    box-shadow: 0 4px 10px rgba(0,0,0, 0.4);
+   
 }
 
 body{
     background-color: #403D39;
+    margin: 0;
+   
 }
 
 main{
@@ -90,19 +94,22 @@ h2 a{
 
 h3 a{
     text-align: left;
-     color: #E3B23C;
+    color: #E3B23C;
     font-family: var(--font-primary);
 }
 
 p {
     text-indent: 2em;
 }
-
-nav h3{
-    word-spacing: 20px; 
+.nav2 {
+    position:sticky;
+    text-align: right;
+    top:130px;
+    padding-right: 45px;
+    word-spacing: 20px;
 }
 
-@media (max-width: 450px) {
+@media (max-width: 600px) {
 
     header {
         padding: 18px 12px 10px;
