@@ -52,8 +52,8 @@ header {
     top: 0;
     z-index: 0;
     text-align: right;
-    background-color: var(--color-text-dark);
-    border: 2px;
+    background-color: var(--color-background);
+    border: var(--color-text-dark) 2px;
     padding: 30px 30px 10px;
     width: auto;
     margin: 0;
