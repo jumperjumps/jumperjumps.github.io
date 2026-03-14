@@ -1,174 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <style>
-
-.infogrid {
+   
+.project {
     display: grid;
-    grid-template-columns: 1fr 1fr; 
+    grid-template-columns: 1fr 1fr;
     gap: 100px;
-    align-items: start;
+    margin-bottom: 200px;
 }
 
-.infogrid p {
-    grid-column: 1; 
-    max-width: 600px;
+
+.textcol {
+    position: relative;
 }
 
-.infogrid h2,
-.infogrid h3 {
-    grid-column: 1; 
+
+.textstick {
+    position: sticky;
+    top: 160px; 
+    align-self: start;
+    z-index: 0;
 }
 
-.infogrid img{
-    grid-column: 2; 
+
+.imagecol img {
     width: 100%;
     height: auto;
- 
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     border-radius: 8px;
 }
 
 
-/* .textstick{
-    position:sticky;
-    top:120px; 
-    align-self: start;
+@media (max-width: 800px) {
+    .project {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .textstick {
+        position: static; 
+    }
 }
-.textstick2{
-    position:sticky;
-    top:120px; 
-}
-.textstick3{
-    position:sticky;
-    top:120px; 
-}
-.textstick4{
-    position:sticky;
-    top:120px; 
-} */
-
-/* @media (max-width: 450px) {
-
-    .infogrid {
-        grid-template-columns: 1fr;  
-        gap: 15px;
-    }
-
-    .infogrid h1,
-    .infogrid img,
-    .infogrid p,
-    .infogrid h2,
-    .infogrid h3 {
-        grid-column: 1;              
-    }
-
-    .infogrid img {
-        width: 100%;
-        height: auto;
-        margin: 0 auto 15px;
-        border-radius: 8px;
-    }
-
-    .infogrid p {
-        max-width: 100%;
-        padding: 0 5px;
-        line-height: 1.55;
-    }
-} */
 </style>
-
-<link rel="stylesheet" href="portfolio.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anton+SC&family=Lexend+Exa:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anton+SC&family=Lexend+Exa:wght@100..900&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Laura Jumper Portfolio</title>
+
+    <link rel="stylesheet" href="portfolio.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton+SC&family=Lexend+Exa:wght@100..900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <header>
-        <h1>Design <i>Portfolio</i></h1>
+
+<header>
+    <h1>Design <i>Portfolio</i></h1>
 
     <nav>
-    <h2><a href="a-home.html">Home</a> | 
-        <a href="b-design.html">Design</a> | 
-        <a href="c-resume.html">Resume</a> 
+        <h2>
+            <a href="a-home.html">Home</a> | 
+            <a href="b-design.html">Design</a> | 
+            <a href="c-resume.html">Resume</a>
+        </h2>
     </nav>
-    </header>
+</header>
 
-     <nav class="nav2">
-        <h3><a href="b2-designs.html">Design</a> 
-            <a href="b2-photo.html">Photography</a> 
-            <a href="b2-code.html">Code</a></h3>
-    </nav>
+<nav class="nav2">
+    <h3>
+        <a href="b2-designs.html">Design</a>
+        <a href="b2-photo.html">Photography</a>
+        <a href="b2-code.html">Code</a>
+    </h3>
+</nav>
 
-     <main>
-        <div class ="infogrid">
-
-        
-       <div class="textstick">
-        <h1>Colorado Symphony Classics</h1>
-        <p> Demonstrates advanced proficiency in Adobe Illustrator and Adobe InDesign through thoughtful layout, typography, and visual hierarchy.<br><br>
-
+<main>
+    <div class="project">
+        <div class="textcol">
+            <div class="textstick">
+                <h1>Colorado Symphony Classics</h1>
+                  <p> Demonstrates advanced proficiency in Adobe Illustrator and Adobe InDesign through thoughtful layout, typography, and visual hierarchy.<br><br>
             The front of the poster establishes an elegant design approach, that the viewers are able to understand and get the sense of sophistication.<br><br>
-
         The back layout accommodates all required information while maintaining the elegant visual. Strategic use of typographic hierarchy, spacing, and alignment is demonstrated.<br><br>
-
-        A primary challenge of this project was developing a visual identity independent of the existing real-world company. This required creating a design aesthetic from the ground up, as well as designing an effective layout capable of organizing a large amount of information in a clear manner.</p>
+        A primary challenge of this project was developing a visual identity independent of the existing real-world company. This required creating a design aesthetic from the ground up, 
+        as well as designing an effective layout capable of organizing a large amount of information in a clear manner.</p>
+            </div>
         </div>
-        <div>
-        <img src="assets/SymphPoster1V.jpg" alt="Front Design.">
-        <img src="assets/SymphPoster1V2.jpg" alt="Back Design.">
+
+        <div class="imagecol">
+            <img src="assets/SymphPoster1V.jpg" alt="Front Design">
+            <img src="assets/SymphPoster1V2.jpg" alt="Back Design">
         </div>
-        
+    </div>
 
-      
-        <div class="textstick2">
-        <h1>Anatomy of Typography</h1>
-        <p> This project demonstrates advanced expertise in typography, including a strong understanding of font anatomy.<br><br>
-
-            Created entirely in Adobe Illustrator, the work showcases precision in technical execution, attention to detail, and intentional designing decisions that enhance readability and the visual impact.</p>
+    <div class="project">
+        <div class="textcol">
+            <div class="textstick">
+                <h1>Anatomy of Typography</h1>
+               <p> This project demonstrates advanced expertise in typography, including a strong understanding of font anatomy.<br><br>
+            Created entirely in Adobe Illustrator, the work showcases precision in technical execution, attention to detail, 
+            and intentional designing decisions that enhance readability and the visual impact.</p>
+            </div>
         </div>
-        <div>
-        <img src="assets/Ananomy.jpg" alt="Front Design.">
+
+        <div class="imagecol">
+            <img src="assets/Ananomy.jpg" alt="Typography Anatomy">
         </div>
-      
+    </div>
 
-    
-        <div class="textstick3">
-        <h1>Poster Replicate</h1>
-        <p> This project demonstrates the ability to accurately recreate an existing design through original and intentional methods. It reflects a high level of attention to detail and a strong commitment to preserving the integrity of the original piece.<br><br>
-
-            Created entirely in Adobe Illustrator, every element was designed by hand to delicately reconstruct a printed poster. The work highlights a strong understanding of typography, color theory, scale, spacing, and overall visual hierarchy.</p>
+  
+    <div class="project">
+        <div class="textcol">
+            <div class="textstick">
+                <h1>Poster Replicate</h1>
+                <p> This project demonstrates the ability to accurately recreate an existing design through original and intentional methods. 
+                    It reflects a high level of attention to detail and a strong commitment to preserving the integrity of the original piece.<br><br>
+            Created entirely in Adobe Illustrator, every element was designed by hand to delicately reconstruct a printed poster. 
+            The work highlights a strong understanding of typography, color theory, scale, spacing, and overall visual hierarchy.</p>
+            </div>
         </div>
-        <div>
-        <img src="assets/Duplicate-100.jpg" alt="Front Design.">
+
+        <div class="imagecol">
+            <img src="assets/Duplicate-100.jpg" alt="Poster Replicate">
         </div>
-      
+    </div>
 
-    
-        <div class="textstick4">
-        <h1>Lordess Leaves</h1>
-        <p> This project showcases a multidisciplinary design skill set by taking an original concept from the original idea to full brand realization. The work demonstrates the ability to develop a cohesive visual identity—including the look, feel, logo, and brand mission—while ensuring all elements flow as a unified visual rather than separate components.<br><br>
-
-            The project includes the development of a tea tin product, including logo design, branding, packaging, and product identity. The logo was hand-designed in Procreate, showing dedication to originality. The product was 3D rendered in Adobe Substance 3D Stager to create a realistic mock up, and Adobe Illustrator was used to create layouts and present the product in a polished, professional format.<br><br>
-
-            This project showcases many different expertise. It demonstrates the ability to come up with an original idea and bring it to life by designing a look, logo, feel, and brand with a mission. There is attention to creating a cohesive brand and product that feels like one making it more pleasing to the consumers. 
+   
+    <div class="project">
+        <div class="textcol">
+            <div class="textstick">
+                <h1>Lordess Leaves</h1>
+                 <p> This project showcases a multidisciplinary design skill set by taking an original concept from the original idea to full brand realization. 
+                    The work demonstrates the ability to develop a cohesive visual identity—including the look, feel, logo, and brand mission—while ensuring all 
+                    elements flow as a unified visual rather than separate components.<br><br>
+            The project includes the development of a tea tin product, including logo design, branding, packaging, and product identity. 
+            The logo was hand-designed in Procreate, showing dedication to originality. The product was 3D rendered in Adobe Substance 3D 
+            Stager to create a realistic mock up, and Adobe Illustrator was used to create layouts and present the product in a polished, professional format.<br><br>
+            This project showcases many different expertise. It demonstrates the ability to come up with an original idea and bring it to 
+            life by designing a look, logo, feel, and brand with a mission. There is attention to creating a cohesive brand and product that feels like one making it more pleasing to the consumers. 
         </p>
+            </div>
         </div>
-        <div>
-        <img src="assets/TT3D.jpg" alt="Front Design.">
-        <img src="assets/TTLayout.jpg" alt="Front Design.">
+
+        <div class="imagecol">
+            <img src="assets/TT3D.jpg" alt="Tea Tin 3D">
+            <img src="assets/TTLayout.jpg" alt="Tea Tin Layout">
         </div>
-        </div>
-      
-    </main>
+    </div>
+
+</main>
+
 </body>
 </html>
