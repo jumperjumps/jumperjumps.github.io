@@ -1,18 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+<style>
+        /* --- TWO COLUMN LAYOUT --- */
+        main {
+            margin: 20px 175px 0 50px;
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            column-gap: 40px;
+            row-gap: 25px;
+        }
 
- <style>
-    main{
-        margin-top: 20px;
-        margin-left: 50px;
-        margin-right: 175px;
-    }
-        h2{
+        .section-title {
+            grid-column: 1;
+        }
+
+        .section-content {
+            grid-column: 2;
+        }
+           h2{
             color:#EB5E28;
         }
-        p {
-            text-indent: 0;
-        }
+       
         strong{
             color:#E3B23C;
         }
@@ -20,25 +28,34 @@
         color:var(--color-text-light);
         font-family: var(--font-primary);
     }
-        
+
+        /* Responsive layout */
         @media (max-width: 800px) {
+            main {
+                margin: 15px;
+                grid-template-columns: 1fr;
+            }
 
-    main {
-        margin: 15px 15px 0 15px; 
-    }
+            .section-title {
+                grid-column: 1;
+            }
 
-    h2 {
-        font-size: 1.4rem;
-        margin-bottom: 10px;
-    }
+            .section-content {
+                grid-column: 1;
+            }
 
-    p {
-        font-size: 1rem;
-        line-height: 1.55;
-    }
-}
+            h2 {
+                font-size: 1.4rem;
+                margin-bottom: 10px;
+            }
 
+            p, li {
+                font-size: 1rem;
+                line-height: 1.55;
+            }
+        }
     </style>
+
 <link rel="stylesheet" href="portfolio.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -55,84 +72,93 @@
 
 <body>
     <header>
-    <h1>Resume <i>Portfolio</i></h1>
+        <h1>Resume <i>Portfolio</i></h1>
 
-    <nav>
-    <h2> <a href="a-home.html">Home</a> | 
-        <a href="b-design.html">Design</a> | 
-        <a href="c-resume.html">Resume</a>
-   </nav>
+        <nav>
+            <h2>
+                <a href="a-home.html">Home</a> | 
+                <a href="b-design.html">Design</a> | 
+                <a href="c-resume.html">Resume</a>
+            </h2>
+        </nav>
     </header>
 
-   
-    
     <main>
-        <a class="pdf" href="assets/Resume.pdf" target="_blank" rel="noopener noreferrer">View My Portfolio (PDF)</a>
+        <div class="section-title"></div>
+        <div class="section-content">
+            <a class="pdf" href="assets/Resume.pdf" target="_blank" rel="noopener noreferrer">View My Portfolio (PDF)</a>
+        </div>
 
-        <h2>Education</h2>
-        <p> University of Colorado Boulder<br>
-        <strong>Bachelor of Science, College of Engineering Boulder, CO</strong><br>
-        Major in Creative Technology and Design in The ATLAS Institute May 2027<br>
-        Minor in Dance<br>
-        <string>GPA 3.8 - Dean’s List Scholar</string></p>
+        <h2 class="section-title">Education</h2>
+        <div class="section-content">
+            <p>
+                University of Colorado Boulder<br>
+                <strong>Bachelor of Science, College of Engineering Boulder, CO</strong><br>
+                Major in Creative Technology and Design in The ATLAS Institute — May 2027<br>
+                Minor in Dance<br>
+                <strong>GPA 3.8 — Dean’s List Scholar</strong>
+            </p>
+        </div>
 
-       <h2>Technical Skills</h2>
-       <p>Adobe Creative Suite (Illustrator, InDesign, Photoshop, Lightroom, etc.) | Microsoft Suite (Word, Outlook, Excel, etc.)
-        | JavaScript | Typescript | HTML | CSS | Procreate | Web flow | Figma</p>
+        <h2 class="section-title">Technical Skills</h2>
+        <div class="section-content">
+            <p>
+                Adobe Creative Suite (Illustrator, InDesign, Photoshop, Lightroom, etc.) | 
+                Microsoft Suite (Word, Outlook, Excel, etc.) |
+                JavaScript | Typescript | HTML | CSS | Procreate | Webflow | Figma
+            </p>
+        </div>
 
-        <h2>Experience</h2>
-        <p><strong>UI/UX Project Manager</strong></p>
-        <p>Academic Project</p>
-        <ul>
-            <li>Utilized UI/UX software to develop a website to propose a college campus installation with a layout of the design concept,
-                as well as an explanation of the alignment of the installation for the campus</li>
-            <li>Developed a digital model of the installation using 3D design software, giving a visualization of the piece interacting in
-                the space</li>
-        </ul>
+        <h2 class="section-title">Experience</h2>
+        <div class="section-content">
 
-        <p><strong>Brand Developer</strong></p>
-        <p>Sustainable Streetwear Concept</p>
-        <ul>
-            <li>Developed a brand identity, including designing the logo and the look of the brand, as well as presenting the core values of
-the company with ethical production as a base</li>
-            <li>Presented an initial expense timeline accounting for start-up costs, materials, advertising, and production</li>
-            <li>Conducted industry research to outline the rising clothing demands for streetwear and identify the gaps in sustainability</li>
-        </ul>
+            <p><strong>UI/UX Project Manager</strong></p>
+            <p>Academic Project</p>
+            <ul>
+                <li>Utilized UI/UX software to develop a website proposing a college campus installation with layout and design concept</li>
+                <li>Developed a 3D digital model to visualize the installation interacting with the space</li>
+            </ul>
 
-        <p><strong>Print Designer</strong></p>
-        <p>Program and Poster Design</p>
-        <ul>
-            <li>Created a concert program and poster using publishing and page layout software, developing clean typography and
-readability for informational text</li>
-            <li>Prototyping the product by printing and assembling materials, and ensuring product quality and readiness for distribution</li>
-        </ul>
+            <p><strong>Brand Developer</strong></p>
+            <p>Sustainable Streetwear Concept</p>
+            <ul>
+                <li>Developed a brand identity including logo design and core values centered on ethical production</li>
+                <li>Created an expense timeline covering start-up costs, materials, advertising, and production</li>
+                <li>Conducted industry research to identify sustainability gaps in streetwear</li>
+            </ul>
 
-        <p><strong>Digital Photographer</strong></p>
-        <p>Freelance Work</p>
-        <ul>
-            <li>Planning and executing photoshoots for clients by selecting ideal locations and directing creative choices for the aesthetics
-desired by the client</li>
-            <li>PUsing image editing and graphic design software to create high-quality final products tailored to individual clients</li>
-        </ul>
-        <p><strong>Shift Leader</strong></p>
-        <p>Salvation Army</p>
-        <ul>
-            <li>Client-facing role, managing front-of-store operations and making decisions for product placement and store layout for
-improved client experience and workflow</li>
-            <li>Handled elevated concerns of associates, advising for smoother operations in a retail environment</li>
-        </ul>
+            <p><strong>Print Designer</strong></p>
+            <p>Program and Poster Design</p>
+            <ul>
+                <li>Created a concert program and poster with clean typography and strong readability</li>
+                <li>Printed and assembled prototypes to ensure quality and readiness for distribution</li>
+            </ul>
 
+            <p><strong>Digital Photographer</strong></p>
+            <p>Freelance Work</p>
+            <ul>
+                <li>Planned and executed photoshoots, selecting locations and directing creative choices</li>
+                <li>Used editing and design software to produce high‑quality final images</li>
+            </ul>
 
-        <h2>Leadership Experience</h2>
-        <p><strong>Research Methods: Marketing and Public Relations</strong></p>
-        <p>Research and Analysis</p>
-        <ul>
-            <li>Conducted in-depth research focusing on advertising and marketing responses from consumers, reviewing datasets, and
-customer interactions with certain markets</li>
-            <li>Gathered quantitative and qualitative data for further insight and analysis to present strategic recommendations to optimize
-consumer response</li>
-        </ul>
+            <p><strong>Shift Leader</strong></p>
+            <p>Salvation Army</p>
+            <ul>
+                <li>Managed front‑of‑store operations and optimized product placement for improved workflow</li>
+                <li>Handled elevated concerns and supported associates in a retail environment</li>
+            </ul>
+        </div>
+
+        <h2 class="section-title">Leadership Experience</h2>
+        <div class="section-content">
+            <p><strong>Research Methods: Marketing and Public Relations</strong></p>
+            <p>Research and Analysis</p>
+            <ul>
+                <li>Conducted research on consumer responses to advertising and marketing strategies</li>
+                <li>Gathered quantitative and qualitative data to present strategic recommendations</li>
+            </ul>
+        </div>
+
     </main>
-    
 </body>
 </html>

@@ -97,9 +97,6 @@ h3 a{
     font-family: var(--font-primary);
 }
 
-p {
-    text-indent: 2em;
-}
 .nav2 {
     position:sticky;
     text-align: right;
