@@ -15,7 +15,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Laura Jumper Portfolio</title>
 <style>
-    .codegrid {
+.codegrid {
         display: grid;
         grid-template-columns: 1fr 1fr; 
         gap: 30px; 
@@ -23,16 +23,21 @@
         padding: 20px;
     }
 
-    .flexcode {
+.flexcode {
         margin-left: 20px;
         margin-top: 50px;
         max-width: 600px;
     }
-    .flexvid video{
+
+.flexvid video{
         margin-top: 40px;
     }
 
-    @media (max-width: 800px) {
+.flexcode h2{
+    color:var(--color-accent);
+}
+
+    @media (max-width: 1024px) {
 
     .codegrid {
         grid-template-columns: 1fr;   
@@ -60,7 +65,8 @@
  
 <body>
    <header>
-        <h1>Design <i>Portfolio</i></h1>
+        <h1>Design <a href="a-home.html"><i>Portfolio</i></a>
+    </h1>
 
     <nav>
         <h2><a href="a-home.html">Home</a> | 
@@ -86,7 +92,7 @@
 
         <aside class="flexvid">
        <video autoplay width="400" height="400">
-        <source src="assets/PressPlay.mov" type="video/mp4">
+        <source src="assets/PressPlay.mov" type="video/mp4" alt="A video of the code, showing a 3 by 3 grid. A mouse clicking each cube making it turn white and stop growing and shrinking.">
         </video>
     </aside>
     </main>
