@@ -4,6 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Anton+SC&family=Lexend+Exa:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Anton+SC&family=Lexend+Exa:wght@100..900&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --color-accent:  #EB5E28;      
+      --color-accent2: #E3B23C;     
+      --color-background: #403D39;
+      --color-lightbackground:  #CCC5B9;
+      --color-text-dark: #252422;
+      --color-text-light: #FFFCF2;
+
+      /* Typography */
+      --font-primary: 'Lexend Exa', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-secondary: "Libre Caslon Text", serif;
+    }
+    body{
+      background-color: var(--color-background);
+      margin: 0;
+      padding: 40px;
+    }
+    label{
+      padding: 20px;
+      font-family: var(--font-primary);
+      color:var(--color-lightbackground);
+    }
+    input{
+      background-color: var(--color-text-dark);
+      color: var(--color-text-light);
+      border: transparent;
+    }
+    .generate{
+      background-color:var(--color-accent);
+      margin: 10px;
+      border-radius: 20px;
+      border: var(--color-background);
+      font-family: var(--font-primary);
+      color:var(--color-text-dark);
+    }
+    fieldset{
+      font-family: var(--font-primary);
+      color:var(--color-lightbackground);
+    }
+
+
+
+  </style>
 </head>
 <body>
     <div>
@@ -47,8 +98,7 @@ function returnRandomStoryString() {
     const randomCharacter= randomValueFromArray(characters);
     const randomPlace= randomValueFromArray(places);
     const randomEvent= randomValueFromArray(events);
- let storyText = 'It was 94 Fahrenheit outside, so :insertx: went for a walk. When they got to :inserty:, they stared in horror for a few moments, then :insertz:. Bob saw the whole thing, but was not surprised — :insertx: weighs 300 pounds, and it was a hot day.';
-
+ let storyText = `It was 94 Fahrenheit outside, so ${randomCharacter} went for a walk. When they got to ${randomPlace}, they stared in horror for a few moments, then ${randomEvent}. Bob saw the whole thing, but was not surprised — ${randomCharacter} weighs 300 pounds, and it was a hot day.`;
   return storyText;
 }
 
@@ -64,14 +114,14 @@ function generateStory() {
   }
 
   if (document.getElementById("uk").checked) {
-    const weight = Math.round(300);
-    const temperature = Math.round(94);
-    newStory = newStory.replace("300 pounds", value)
-    newStory = newStory.replace("94 Farenheit", )
+    const weight = `${Math.round(300 / 14)} stone`;
+    const temperature = `${Math.round((94 - 32) * (5 / 9))} Celsius`;
+    newStory = newStory.replace("300 pounds", weight);
+    newStory = newStory.replace("94 Fahrenheit", temperature);
   }
 
   // TODO: replace "" with the correct expression
-  story.textContent = "";
+  story.textContent = newStory;
   story.style.visibility = "visible";
 }
 </script>
