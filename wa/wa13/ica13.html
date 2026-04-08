@@ -74,13 +74,26 @@ class Ball {
         const distance = Math.sqrt(dx * dx + dy * dy);
 
         if (distance < this.size + ball.size) {
-        //    implement to make balls bounce away from eachother
+    
+          const newx = dx / distance;
+          const newy = dy / distance;
+          const hitx = this.velX - ball.velX;
+          const hity = this.velY - ball.velY;
+          const impact = hitx * newx + hity * newy;
+
+          if (impact < 0) {
+            this.velX -= impact * newx;
+            this.velY -= impact * newy;
+            ball.velX += impact * newx;
+            ball.velY += impact * newy;
+          }
+        }
 
         }
       }
     }
   }
-}
+
 const balls = [];
 
 while (balls.length < 25) {
