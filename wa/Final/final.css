@@ -31,25 +31,25 @@ button {
 button:hover {
   background: orangered;
 }
+.score {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  text-shadow: 2px 2px 4px black;
+}
 .game {
   width: 800px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 40px;
 }
-
-.hole {
-  width: 200px;
-  height: 150px;
-  background: url('assets/Mole-Hole.png') center/contain no-repeat;
-  position: relative;
-  overflow: hidden;
+.mole {
+  border: 3px solid red;
 }
-
 .mole {
   width: 120px;
   height: 120px;
-  background: url('assets/Mole\(+10\).png') center/contain no-repeat;
+  /* background:no-repeat; */
   position: absolute;
   bottom: -120px; /* hidden */
   left: 50%;
@@ -61,4 +61,14 @@ button:hover {
 .mole.up {
   bottom: 0; /* visible */
 }
+
+.hole {
+  width: 200px;
+  height: 150px;
+  background: url('assets/Mole-Hole.png') center/contain no-repeat;
+  position: relative;
+  overflow: hidden;
+}
+
+
 
