@@ -1,23 +1,32 @@
+
+
 body {
   margin: 0;
-  background: url('assets/Field.jpeg') center/cover no-repeat;
+  background: url('assets/AdobeStock_909562877.jpeg') center/cover no-repeat;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 h1{
-font-family: "CCThatsAllFolks";
-margin-bottom: 450px;
-
+  display: flex;
+  justify-content: center ;
+  margin: 0 0 20px 0;
+  font-size: 70px;
+  font-family: "CCThatsAllFolks";
+  margin-bottom: 500px;
+  margin-left: 200px;
 }
+
 .controls {
+  margin-top: 370px;
   margin-bottom: 450px;
+  margin-left: 10px;
 }
 
 button {
   padding: 12px 25px;
-  margin: 0 10px;
+  margin:10px;
   font-family: "CCThatsAllFolks";
   font-size: 18px;
   border: none;
@@ -32,31 +41,36 @@ button:hover {
   background: orangered;
 }
 .score {
-  font-size: 24px;
+  margin-top: 50px;
+  font-size: 50px;
+  font-family: "CCThatsAllFolks";
   font-weight: bold;
   color: white;
   text-shadow: 2px 2px 4px black;
 }
 .game {
+  margin-bottom: -300px;
+  margin-right: 300px;
   width: 800px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 40px;
 }
+
+
 .mole {
-  border: 3px solid red;
-}
-.mole {
-  width: 120px;
-  height: 120px;
-  /* background:no-repeat; */
+  width: 150px;
+  height: 150px;
+  bottom: -150px;
   position: absolute;
-  bottom: -120px; /* hidden */
   left: 50%;
   transform: translateX(-50%);
-  transition: bottom 0.2s;
-  pointer-events: auto;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 10;
 }
+
 
 .mole.up {
   bottom: 0; /* visible */
@@ -69,6 +83,7 @@ button:hover {
   position: relative;
   overflow: hidden;
 }
+
 
 
 

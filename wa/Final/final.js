@@ -36,12 +36,12 @@ function popUp() {
   // Pick a random mole type — repeats allowed
   const type = moleTypes[Math.floor(Math.random() * moleTypes.length)];
 
-  mole.style.backgroundImage = `url(${type.img})`;
+mole.style.backgroundImage = `url("${type.img}")`;
   mole.dataset.value = type.value;
 
   mole.classList.add('up');
 
-  let hideTime = randomTime(1000, 2000);
+  let hideTime = randomTime(500, 1000);
 
   mole.onmouseenter = () => {
     hideTime = 300;
@@ -52,7 +52,7 @@ function popUp() {
     mole.onmouseenter = null;
     popUp();
   }, hideTime);
-}
+};
 
 // Clicking a mole adds score
 moles.forEach(mole => {
