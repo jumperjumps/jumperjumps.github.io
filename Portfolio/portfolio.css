@@ -19,6 +19,8 @@
             /* Typography */
             --font-primary: 'Lexend Exa', -apple-system, BlinkMacSystemFont, sans-serif;
             --font-secondary: "Libre Caslon Text", serif;
+            --possible-font:"Italiana", sans-serif;
+
 
         }
 
@@ -26,6 +28,7 @@
 
 html{
     overflow-x: hidden;
+    overflow-y: auto;
 }
 
 nav h2 {

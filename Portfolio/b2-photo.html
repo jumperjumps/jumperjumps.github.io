@@ -16,39 +16,51 @@
     <title>Laura Jumper Portfolio</title>
 
 <style>
-.photo-grid{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
+.Intro{
+    display:flex;
+    justify-content: center;
+    width:80%;
+    margin-left: 65px;
+}
+.row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0 4px;
 }
 
-.photo-grid img {
-    height:400px;
-    object-fit: contain;
-    border-radius: 6px;
-    box-shadow: 0 4px 10px rgba(0,0,0,15%);
-    border-radius: 8px;
+/* Create four equal columns that sits next to each other */
+.column {
+  flex: 30%;
+  max-width: 30%;
+  padding: 0 4px;
 }
 
-main h2{
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+.column p {
+    font-size: 8px;
+}
+
+main h2 {
+    font-family:var(--possible-font);
+    font-size: 40px;
     color:var(--color-accent);
 }
 
 @media (max-width: 1230px) {
+  .column {
+    flex: 50%;
+    max-width: 50%;
+  }
 
-    .photo-grid {
-        display: grid;
-        grid-template-columns: 1fr;  
-        gap: 15px;
-        padding: 0 10px;
-    }
-
-    .photo-grid img {
-        width: 100%;      
-        height: auto;       
-        object-fit: cover;  
-        border-radius: 8px;
-    }
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
 }
 
 </style>
@@ -74,24 +86,43 @@ main h2{
     </nav>
    
     <main>
-       
-        <h2>Artistic Photoshoot</h2>
-        <h3>Model Skyler Martin</h3>
-        <p>This photo shoot demonstrates an ability to establish and execute a cohesive aesthetic through multiple visual approaches. It pushes the creative boundaries in photography through intentional use of lighting, focus, and model arrangement, resulting in images that are both expressive and concept-driven.</p>
-        <div class="photo-grid">
-        <img src="assets/Sky1.jpg" alt="Close up of the model with red lighting">
-        <img src="assets/Sky2.jpg" alt="Green blue lighting with the models reflection in the mirror">
-        <img src="assets/Sky5.jpg" alt="Model running away from camera, making a blured effect">
-        <img src="assets/Sky3.jpg" alt="Model leaning back on the side of a bridge, looking up">
-        <img src="assets/Sky4.jpg" alt="Model looking down in purple lighting, with a shot from above">
 
-        <img src="assets/Cat2.jpg" alt="Three grounps of danceres in different positions with blue lighting coming from the left.">
-        <img src="assets/Cat1.jpg" alt="Singular dancer looking up with read lighting on them.">
-        <img src="assets/Cat6.jpg" alt="Four dancers holding hands getting ready to bow, each one wearing different costumes.">
-        <img src="assets/Cat4.jpg" alt="Two dancers huging with blue lighting on them.">
-        <img src="assets/Cat5.jpg" alt="Two dancers hugging with blue lighting on them iin a different angle.">
-        <img src="assets/Cat3.jpg" alt="One dancer on the ground facing the left with orange lighting.">
-        </div>
+    <div class="Intro">
+        <h2>Photography</h2>
+        <p>This page is full of various photographs from my various shoots. There are a wide varity of styles of photos, showing my wibe range ability of photoshoots.</p>
+    </div>
+       <div class="row">
+  <div class="column">
+    <img src="assets/Catapult1.jpg">
+    <p>Choreographer: <i>Elizabeth Ervin</i><br> Title: <i>"The Wolf Loved the Fawn, and Confessed with its Teeth"</i><br>Organization: <i>University of Colorado Boulder</i> </p>
+    <img src="assets/Current1.jpg">
+    <p>Choreographer: <i>Chrissy Nelson in collaboration with performers</i><br> Title: <i>"the roots will hold"</i><br> Organization: <i>University of Colorado Boulder</i></p>
+    <img src="assets/Catapult2.jpg">
+    <p>Choreographer: <i>Elizabeth Ervin</i><br> Title: <i>"The Wolf Loved the Fawn, and Confessed with its Teeth"</i><br>Organization: <i>University of Colorado Boulder</i> </p>
+    <img src="assets/Current2.jpg">
+    <p>Choreographer: <i>Erika Randall</i><br> Title: <i>"the color of the ocean after a heavy rain"</i><br> Organization: <i>University of Colorado Boulder</i></p>
+  </div>
+
+  <div class="column">
+    <img src="assets/Headshot2.jpg">
+    <p>Subject: <i>Elias Denning</i><br> Location: <i>Chautauqua Park</i></p>
+    <img src="assets/Catapult4.jpg">
+    <p>Choreographer: <i>Adin Williams</i><br> Title: <i>"In My Grandmother’s Garden, Who Are We Becoming?"</i><br>Organization: <i>University of Colorado Boulder</i> </p>
+    <img src="assets/Current4.jpg">
+    <p>Choreographer: <i>Erika Randall</i><br> Title: <i>"the color of the ocean after a heavy rain"</i><br> Organization: <i>University of Colorado Boulder</i></p>
+    <img src="assets/Current3.jpg">
+    <p>Choreographer: <i>Erika Randall</i><br> Title: <i>"the color of the ocean after a heavy rain"</i><br> Organization: <i>University of Colorado Boulder</i></p>
+  </div>
+
+  <div class="column">
+    <img src="assets/Headshot1.jpg">
+    <p>Subject: <i>Elias Denning</i><br> Location: <i>Chautauqua Park</i></p>
+    <img src="assets/Catapult3.jpg">
+    <p>Choreographer: <i>Camden Sharkey</i><br> Title: <i>"Alivetime"</i><br>Organization: <i>University of Colorado Boulder</i> </p>
+    <img src="assets/Headshot3.jpg">
+    <p>Subject: <i>Elias Denning</i><br> Location: <i>Chautauqua Park</i></p>
+  </div>
+</div>
 
     </main>
 
