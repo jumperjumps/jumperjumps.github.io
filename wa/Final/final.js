@@ -3,11 +3,9 @@ const moles = document.querySelectorAll('.mole');
 let gameRunning = false;
 let timeoutId = null;
 
-// Score
 let score = 0;
 const scoreDisplay = document.getElementById('scoreValue');
 
-// Mole types (these repeat infinitely)
 const moleTypes = [
   { img: "assets/Mole(-1).png", value: -1 },
   { img: "assets/Mole(-3).png", value: -3 },
@@ -24,29 +22,32 @@ function randomTime(min, max) {
   return Math.round(Math.random() * (max - min) + min);
 }
 
+//makes it so the moles are random between the various pngs and that the pngs do not over lap
 function randomMole() {
-  return moles[Math.floor(Math.random() * moles.length)];
+  const available = [...moles].filter(m => !m.classList.contains('up'));
+  if (available.length === 0) return null;
+  if (!available) return; // no available holes, skip this turn
+  return available[Math.floor(Math.random() * moles.length)];
 }
 
 function popUp() {
   if (!gameRunning) return;
 
   const mole = randomMole();
-
-  // Pick a random mole type — repeats allowed
   const type = moleTypes[Math.floor(Math.random() * moleTypes.length)];
 
-mole.style.backgroundImage = `url("${type.img}")`;
+  mole.style.backgroundImage = `url("${type.img}")`;
   mole.dataset.value = type.value;
 
   mole.classList.add('up');
 
-  let hideTime = randomTime(500, 1000);
+  let hideTime = randomTime(900, 1500);
 
   mole.onmouseenter = () => {
     hideTime = 300;
   }
 
+  // make the timer for when the moles popup
   timeoutId = setTimeout(() => {
     mole.classList.remove('up');
     mole.onmouseenter = null;
@@ -54,15 +55,17 @@ mole.style.backgroundImage = `url("${type.img}")`;
   }, hideTime);
 };
 
-// Clicking a mole adds score
+//add score when hit the mole and restart the timeoutID
 moles.forEach(mole => {
   mole.addEventListener('click', () => {
     if (mole.classList.contains('up')) {
+      clearTimeout(timeoutId);
       const value = parseInt(mole.dataset.value);
       score += value;
+      score = Math.max(0, Math.min(100, score));
       scoreDisplay.textContent = score;
-
       mole.classList.remove('up');
+      popUp();
     }
   });
 });
@@ -73,6 +76,7 @@ document.getElementById('startBtn').addEventListener('click', () => {
     gameRunning = true;
     score = 0;
     scoreDisplay.textContent = score;
+     document.getElementById('scoreOverlay').classList.remove('active');
     popUp();
   }
 });
@@ -81,8 +85,10 @@ document.getElementById('startBtn').addEventListener('click', () => {
 document.getElementById('submitBtn').addEventListener('click', () => {
   gameRunning = false;
   clearTimeout(timeoutId);
-
   moles.forEach(m => m.classList.remove('up'));
+  // document.querySelector('.score').classList.add('score-final');
+  document.getElementById('scoreFinal').textContent = scoreDisplay.textContent;
+  document.getElementById('scoreOverlay').classList.add('active');
 });
 
 
