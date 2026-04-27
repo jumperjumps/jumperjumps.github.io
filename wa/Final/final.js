@@ -26,7 +26,7 @@ function randomTime(min, max) {
 function randomMole() {
   const available = [...moles].filter(m => !m.classList.contains('up'));
   if (available.length === 0) return null;
-  if (!available) return; // no available holes, skip this turn
+  if (!available) return; 
   return available[Math.floor(Math.random() * moles.length)];
 }
 
