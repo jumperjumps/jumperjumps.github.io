@@ -22,7 +22,7 @@ function randomTime(min, max) {
   return Math.round(Math.random() * (max - min) + min);
 }
 
-//makes it so the moles are random between the various pngs and that the pngs do not over lap
+// moles are random between the various pngs and that the pngs do not over lap
 function randomMole() {
   const available = [...moles].filter(m => !m.classList.contains('up'));
   if (available.length === 0) return null;
@@ -31,14 +31,13 @@ function randomMole() {
 }
 
 function popUp() {
-  if (!gameRunning) return;
-
   const mole = randomMole();
   const type = moleTypes[Math.floor(Math.random() * moleTypes.length)];
 
+  if (!gameRunning) return;
+
   mole.style.backgroundImage = `url("${type.img}")`;
   mole.dataset.value = type.value;
-
   mole.classList.add('up');
 
   let hideTime = randomTime(900, 1500);
@@ -47,7 +46,7 @@ function popUp() {
     hideTime = 300;
   }
 
-  // make the timer for when the moles popup
+  // the timer for when the moles popup
   timeoutId = setTimeout(() => {
     mole.classList.remove('up');
     mole.onmouseenter = null;
@@ -70,7 +69,7 @@ moles.forEach(mole => {
   });
 });
 
-// Start button
+
 document.getElementById('startBtn').addEventListener('click', () => {
   if (!gameRunning) {
     gameRunning = true;
@@ -81,12 +80,11 @@ document.getElementById('startBtn').addEventListener('click', () => {
   }
 });
 
-// Submit button (stop game)
+
 document.getElementById('submitBtn').addEventListener('click', () => {
   gameRunning = false;
   clearTimeout(timeoutId);
   moles.forEach(m => m.classList.remove('up'));
-  // document.querySelector('.score').classList.add('score-final');
   document.getElementById('scoreFinal').textContent = scoreDisplay.textContent;
   document.getElementById('scoreOverlay').classList.add('active');
 });
